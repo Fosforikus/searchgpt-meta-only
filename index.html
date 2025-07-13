@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TEST A4 – Meta-only</title>
+  <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+  <h1>🧪 TEST A4 – Balise meta noindex</h1>
+
+  <h2>🔍 Objectif du test</h2>
+  <p>Ce test vise à isoler les effets de la balise <code>&lt;meta name="robots" content="noindex,nofollow"&gt;</code>, sans restriction dans le fichier robots.txt. Il permet de vérifier si SearchGPT respecte l’interdiction d’indexation signalée par cette balise HTML uniquement.</p>
+
+  <h2>🧾 Phrase absurde à détecter</h2>
+  <p><strong>La mygale euphonique de Quimper joue de la harpe laser en grec ancien sur des fractales liquides.</strong></p>
+
+  <h2>📁 Configuration robots.txt</h2>
+  <pre>
+User-agent: *
+Allow: /
+  </pre>
+
+  <h2>📌 Résultat attendu</h2>
+  <p>SearchGPT doit pouvoir accéder à la page (grâce à robots.txt), mais ne doit pas indexer ni mentionner la phrase absurde dans ses résultats.</p>
+</body>
+</html>
